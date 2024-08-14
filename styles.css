@@ -1,0 +1,191 @@
+header nav ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.toggle-theme-btn {
+    position: absolute;
+    right: 20px; 
+    top: 22px;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toggle-theme-btn:hover {
+    background-color: #0056b3;
+}
+
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --header-bg-color: #fff;
+    --footer-bg-color: #333;
+    --footer-text-color: #fff;
+    --product-card-bg: #fff;
+    --product-card-shadow: rgba(0, 0, 0, 0.1);
+    --link-color: #333;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+body.dark-theme header {
+    background-color: #444;
+}
+
+body.dark-theme nav ul li a {
+    color: #f5f5f5;
+}
+
+body.dark-theme .product-card {
+    background-color: #444;
+    color: #e1e1e1;
+    -webkit-text-fill-color: #f5f5f5;
+    
+}
+
+body.dark-theme footer {
+    background-color: #222;
+}
+
+/* Apply Variables */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-bg-color);
+    padding: 10px 0;
+    box-shadow: 0 2px 4px var(--product-card-shadow);
+}
+header button {
+    border-radius: 8px;
+
+}
+
+header img {
+    width: 3.7%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.shop {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.shop h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: var(--product-card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--product-card-shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+.product-card p span {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9em;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
